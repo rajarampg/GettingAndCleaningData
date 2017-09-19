@@ -37,8 +37,8 @@ colnames(merged_data)<- columnnames
 ##Extracting only mean and SD
 mean_and_Std_dev <- (grepl("activity_id",columnnames)|
                      grepl("subject_id",columnnames)|
-                     grepl("mean..",columnnames)|
-                     grepl("std..",columnnames)
+                     grepl("mean\\(\\)",columnnames)|
+                     grepl("std\\(\\)",columnnames)
                      )
 setForMeanAndStd <- merged_data[,mean_and_Std_dev==TRUE]
 
